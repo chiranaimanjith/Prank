@@ -1,35 +1,75 @@
-body{
-   background-color: lightskyblue;
+body {
+    background-color: lightskyblue;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
 }
-.window{
+
+.window {
     border: 2px solid black;
-    height: 150px;
-    width: 250px;
+    width: 90%;
+    max-width: 300px;
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30%;
-    padding: 50px;
-    background-color: lightgray;    
+    padding: 20px;
+    background-color: lightgray;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
 }
-button{
+
+button {
     width: 100px;
-    margin-top: 50px;
-    font-size: 35px;
+    font-size: 18px;
     background-color: white;
+    border: none;
     border-radius: 10px;
     box-shadow: 0 0 5px black;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
-#b1{
+
+#b1 {
     color: green;
 }
-#b2{
-    margin-left: 40px;
+
+#b2 {
+    margin-left: 20px;
     color: red;
 }
-#b1:hover{
+
+#b1:hover {
     background-color: lightgreen;
+    transform: scale(1.05);
 }
-#b2:hover{
+
+#b2:hover {
     background-color: lightcoral;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+    .window {
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+    }
+
+    button {
+        width: 80px;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    #b2 {
+        margin-left: 10px;
+    }
 }

@@ -31,3 +31,13 @@ let yes=()=>{
      <h1>I knew it :)</h1>`
      win.style.height="80px"
 }
+
+
+//Go page to page
+function male() {
+    window.location.href = "male.html";
+}
+
+function female() {
+    window.location.href = "female.html";
+}
